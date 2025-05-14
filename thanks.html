@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You for Voting!</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 50px;
+      animation: fadeIn 3s ease;
+    }
+    .brand {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #007bff;
+      animation: slideUp 2s ease infinite alternate;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Thanks for Voting!</h1>
+  <p>Results will be announced after the completion of the election.</p>
+  <div class="brand">VoteSecure</div>
+
+  <script>
+    // Redirect back to ongoing elections if back button pressed
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+      window.location.href = "/ongoing-elections.html";
+    };
+  </script>
+</body>
+</html>

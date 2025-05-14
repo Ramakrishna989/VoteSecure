@@ -1,0 +1,172 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #4c4cfc, #b66dff);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 🛠️ Prevents horizontal scroll */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Change from center to flex-start for better vertical stacking */
+  min-height: 100vh;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+.logout-btn {
+  background-color: #ff6b6b;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #ff4d4d;
+  transform: scale(1.05);
+}
+
+.container {
+  width: 95vw;
+  max-width: 900px;
+  padding: 20px;
+  margin: 40px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .election-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box; /* ✅ Important for padding */
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  .election-card h2 {
+    color: #fbd46d;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+  
+  .no-elections {
+    font-size: 1.5rem;
+    color: #f87171;
+  }
+
+  .toggle-btn {
+    background-color: #fbd46d;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #fce58b;
+  }
+
+  .candidate-list {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding-right: 8px;
+  }
+
+  .candidate-list li:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+  }
+
+  .vote-now-btn {
+    margin-top: 20px;
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color: #fbd46d;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .vote-now-btn:hover {
+    background-color: #00b89c;
+    transform: scale(1.05);
+  }
+  
+
+  @media screen and (max-width: 600px) {
+    .container {
+      width: 90vw;
+      padding: 15px;
+    }
+  
+    .toggle-btn {
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .results-btn, .logout-btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f06272;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .results-btn:hover, .logout-btn:hover {
+    background-color:  #f31c35;
+  }
+  
+  
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

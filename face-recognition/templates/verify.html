@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Face Verification</title>
+  <style>
+    video {
+      width: 720px;
+      height: 560px;
+      border: 2px solid #333;
+    }
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <h2>Face Verification</h2>
+  <video id="video" autoplay muted></video>
+
+  <!-- Load face-api.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
+  <!-- Pass query params to JS -->
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const voterId = urlParams.get("voterId");
+    const electionId = urlParams.get("electionId");
+  </script>
+
+  <script defer src="/static/verify.js"></script>
+</body>
+</html>

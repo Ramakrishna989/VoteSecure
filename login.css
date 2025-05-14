@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Dark elegant gradient */
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glass Effect Container */
+.container {
+  background: rgba(255, 255, 255, 0.15); /* Slightly stronger transparency */
+  backdrop-filter: blur(15px); /* Enhanced blur for clear glass effect */
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 400px; /* Slightly wider for better UI */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Form Heading */
+h2 {
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Labels and Inputs */
+label {
+  display: block;
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+/* Placeholder */
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Focus Effect */
+input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px rgba(30, 136, 229, 0.5);
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  margin-top: 20px;
+  background-color: rgba(30, 136, 229, 0.9);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: rgba(25, 118, 210, 0.9);
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.5);
+}
+
+/* Animation for Form */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .container {
+    width: 90%; /* Adjust for mobile devices */
+    padding: 20px;
+  }
+}

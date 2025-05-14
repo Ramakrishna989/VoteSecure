@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conduct Election</title>
+  <link rel="stylesheet" href="conductElection.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Conduct Election</h1>
+    <form id="electionForm">
+      <label for="electionName">Election Name:</label>
+      <input type="text" id="electionName" />
+      <span class="error" id="electionNameError"></span>
+    
+      <label for="electionType">Election Type (PM, CM, MLA):</label>
+      <input type="text" id="electionType" />
+      <span class="error" id="electionTypeError"></span>
+    
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" />
+      <span class="error" id="startDateError"></span>
+    
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" />
+      <span class="error" id="endDateError"></span>
+    
+      <label for="startTime">Start Time (8 AM to 6 PM):</label>
+      <input type="time" id="startTime" />
+      <span class="error" id="startTimeError"></span>
+    
+      <div class="dropdown-container">
+        <label><strong>Select Candidates</strong></label>
+        <div class="custom-dropdown" onclick="toggleDropdown()">Select Candidates ▼</div>
+        <div class="dropdown-list" id="candidateList"></div>
+        <span class="error" id="candidateListError"></span>
+      </div>
+      
+    
+      <button type="button" id="conductElection">Conduct Election</button>
+    </form>
+    
+  </div>
+
+  <script src="conductElection.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="viewVoters.css" />
+  <title>View Voters</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Voter List</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Address</th>
+          <th>Gender</th>
+          <th>Voter ID</th>
+          <th>Voted</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="voter-table">
+        <!-- Voter rows will be dynamically inserted here -->
+      </tbody>
+    </table>
+    
+    <!-- Total Voters Section -->
+    <div class="total-voters">
+      <p>Total Voters: <span id="total-voters">0</span></p>
+    </div>
+  </div>
+  
+  <script src="viewVoters.js"></script>
+</body>
+</html>

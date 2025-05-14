@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Face Registration</title>
+
+  <!-- ✅ Load face-api.js BEFORE your script -->
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  <script defer src="/static/register.js"></script> <!-- your custom script -->
+
+  <style>
+    body { font-family: Arial; text-align: center; background: #f0f0f0; }
+    video { border: 2px solid #333; margin-top: 20px; }
+    button { margin-top: 20px; padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h2>Register Your Face</h2>
+  <video id="video" width="640" height="480" autoplay muted></video><br>
+  <input type="text" id="userId" placeholder="Enter User ID (MongoDB _id)" /><br>
+  <button id="captureBtn">Register Face</button>
+</body>
+</html>

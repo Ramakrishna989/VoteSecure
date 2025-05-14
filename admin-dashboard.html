@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - VoteSecure</title>
+  <link rel="stylesheet" href="./admin-dashboard.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Welcome to Admin Dashboard</h1>
+  
+    <!-- Admin Buttons Section -->
+    <div class="buttons-container">
+     <button id="addCandidateBtn">Add Candidate</button>
+      <button onclick="window.location.href='/conductElection.html'">Conduct Election</button>
+      <button onclick="window.location.href='/viewVoters.html'">View Voters</button>
+      <button onclick="window.location.href='/viewCandidates.html'">View Candidates</button>
+      <button onclick="announceResults()">Announce Results</button>
+    </div>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+
+    <!-- Add Candidate Section -->
+    <section id="addCandidateSection" class="hidden form-container">
+      <h2>Add Candidate</h2>
+      <form id="addCandidateForm" enctype="multipart/form-data">
+        <label for="candidateName">Candidate Name:</label>
+        <input type="text" id="candidateName" name="candidateName" required />
+      
+        <label for="partyName">Party Name:</label>
+        <input type="text" id="partyName" name="partyName" required />
+      
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="25" max="70" required />
+      
+        <label for="partySymbol">Party Symbol (Image):</label>
+        <input type="file" id="partySymbol" name="partySymbol" accept="image/*" required />
+      
+        <label for="candidateId">Candidate ID (5-Digit Number):</label>
+        <input type="text" id="candidateId" name="candidateId" pattern="\d{5}" required />
+      
+        <button type="submit">Submit</button>
+      </form>
+      
+    </section>
+  </div>
+
+  <script src="./admin-dashboard.js"></script>
+</body>
+
+</html>

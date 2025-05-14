@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - VoteSecure</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-box">
+      <h2>Login to VoteSecure</h2>
+      <form id="loginForm" onsubmit="return loginUser()">
+        <label for="voterId">Voter ID</label>
+        <input type="text" id="voterId" name="voterId" placeholder="Enter your Voter ID" required  autocomplete="voterId"/>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your Password" required autocomplete="password"/>
+
+        <button type="submit">Login</button>
+      </form>
+      <p><a href="forgot-password.html">Forgot Password?</a></p>
+      <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+
+</html>

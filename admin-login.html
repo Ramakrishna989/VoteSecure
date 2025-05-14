@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login - VoteSecure</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <h2>Admin Login</h2>
+      <form id="adminLoginForm">
+        <label for="eciId">ADMIN ID</label>
+        <input type="text" id="eciId" name="eciId" placeholder="Enter your ECI ID" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your Password" required />
+
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="admin-signin.html">Sign Up</a></p>
+    </div>
+  </div>
+
+  <script src="admin-login.js"></script>
+</body>
+</html>
